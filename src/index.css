@@ -36,4 +36,11 @@ body {
     width: 350px;
     margin: 40px 20px;
   }
+  .payment_section {
+    width: 350px;
+    margin: 100px 20px;
+  }
+  .payment_form {
+    width: 350px;
+  }
 }
