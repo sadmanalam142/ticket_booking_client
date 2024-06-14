@@ -4,7 +4,7 @@ const useTickets = () => {
     const [tickets, setTickets] = useState([])
 
  useEffect(()=> {
-    fetch("http://localhost:5000/tickets")
+    fetch("https://ticket-booking-server-1yvn.onrender.com/tickets")
     .then(res => res.json())
     .then(data => setTickets(data))
     }, [])

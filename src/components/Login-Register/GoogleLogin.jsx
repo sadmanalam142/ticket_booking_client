@@ -11,7 +11,7 @@ const GoogleLogin = () => {
           email: data?.user?.email,
           name: data?.user?.displayName,
         };
-        fetch("http://localhost:5000/user", {
+        fetch("https://ticket-booking-server-1yvn.onrender.com/user", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

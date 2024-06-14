@@ -31,7 +31,7 @@ const SingleTicket = ({ ticket }) => {
          image_url: image_url,
          email: user?.email
          };
-    await fetch("http://localhost:5000/booking", {
+    await fetch("https://ticket-booking-server-1yvn.onrender.com/booking", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

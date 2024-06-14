@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
         element: <TicketDetails />,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/tickets/${params.id}`
+            `https://ticket-booking-server-1yvn.onrender.com/tickets/${params.id}`
           ),
       },
       {
@@ -71,13 +71,13 @@ export const router = createBrowserRouter([
           ),
           loader: ({ params }) =>
             fetch(
-              `http://localhost:5000/user/get/${params.id}`
+              `https://ticket-booking-server-1yvn.onrender.com/user/get/${params.id}`
             ),
         },
         {
           path: '/dashboard/payment/:id',
           element: <Payment></Payment>,
-          loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`, {
+          loader: ({params}) => fetch(`https://ticket-booking-server-1yvn.onrender.com/bookings/${params.id}`, {
             method: 'GET',
             headers: {
               'Content-type': 'application/json',

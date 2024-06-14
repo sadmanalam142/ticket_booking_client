@@ -8,7 +8,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const [bookings, setBookings] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/booking/${user?.email}`, {
+        fetch(`https://ticket-booking-server-1yvn.onrender.com/booking/${user?.email}`, {
             method: 'GET',
             headers: {
               'Content-type': 'application/json',
@@ -20,7 +20,7 @@ const MyBookings = () => {
       }, [user]);
 
       const handleRemove = async (id) => {
-        await fetch(`http://localhost:5000/booking/${id}`, {
+        await fetch(`https://ticket-booking-server-1yvn.onrender.com/booking/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-type': 'application/json',

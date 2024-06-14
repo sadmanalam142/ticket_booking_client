@@ -7,7 +7,7 @@ const MyProfile = () => {
   const [userInfo, setUserInfo] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user?.email}`)
+    fetch(`https://ticket-booking-server-1yvn.onrender.com/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);
