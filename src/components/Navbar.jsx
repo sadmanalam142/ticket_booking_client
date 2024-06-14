@@ -6,6 +6,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await logout();
+    localStorage.removeItem("token")
   };
 
   return (
@@ -36,10 +37,7 @@ const Navbar = () => {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
-            </li>
-            <li>
-              <Link to={"/contact"}>Contact</Link>
+              <Link to={"/all-tickets"}>Available Tickets</Link>
             </li>
             {!user && (
               <>
@@ -68,7 +66,7 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <a className="btn btn-ghost text-3xl text-black">Ticket Booking</a>
+        <a className="btn btn-ghost text-3xl text-lime-500">Ticket Booking</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-semibold">
@@ -76,11 +74,8 @@ const Navbar = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link to={"/contact"}>Contact</Link>
-          </li>
+              <Link to={"/all-tickets"}>Available Tickets</Link>
+            </li>
           {!user && (
             <>
               <li>
