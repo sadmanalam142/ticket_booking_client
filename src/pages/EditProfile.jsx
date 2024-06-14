@@ -33,7 +33,7 @@ export default function EditProfile() {
       .then((res) => res.json())
       // eslint-disable-next-line no-unused-vars
       .then((data) => {
-        toast("profile updated successfully!")
+        toast.success("profile updated successfully!")
       });
   };
   return (
