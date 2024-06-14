@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 export default function EditProfile() {
@@ -30,7 +31,10 @@ export default function EditProfile() {
       }
     )
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      // eslint-disable-next-line no-unused-vars
+      .then((data) => {
+        toast("profile updated successfully!")
+      });
   };
   return (
     <div>
